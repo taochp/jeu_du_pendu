@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace jeu_du_pendu.Properties
+namespace JeuDuPendu.Properties
 {
 
 
