@@ -81,8 +81,7 @@ namespace jeu_du_pendu
 
             // Initialisation du nombre d'essai à 0 et mise en place de l'image 0 du pendu
             nbEssai = 0;
-            string dossier = "C:\\Users\\ctao\\Documents\\CNED\\sequence2\\seance1\\jeu_du_pendu\\jeu_du_pendu\\Resources\\";
-            picPendu.Load(dossier + "pendu" + nbEssai + ".png");
+            picPendu.Image = (Image)Properties.Resources.ResourceManager.GetObject("pendu" + nbEssai);
         }
 
         /// <summary>
@@ -112,7 +111,10 @@ namespace jeu_du_pendu
                 cbbChoixlettre.Enabled = true;
                 btnTest.Enabled = true;
                 txtMotachercher.Enabled = false;
-                
+
+                // Focus sur le combobox
+                cbbChoixlettre.Focus();
+
                 // Changement du texte du bouton jouer pour relancer à tout moment le jeu
                 btnPlay.Text = "Rejouer";
             }
@@ -130,10 +132,7 @@ namespace jeu_du_pendu
         {
             // Récupération de n'importe quelle erreur lors du choix de la lettre
             try
-            {
-                // Focus sur le choix de la lettre pour le joueur 2
-                cbbChoixlettre.Focus();
-                
+            {  
                 // Variables
                 string motCache = txtMotachercher.Text, newMot = "";
                 bool lettrePresente = false;
@@ -171,8 +170,8 @@ namespace jeu_du_pendu
                     else
                     {
                         // Changement de l'image du pendu
-                        string dossier = "C:\\Users\\ctao\\Documents\\CNED\\sequence2\\seance1\\jeu_du_pendu\\jeu_du_pendu\\Resources\\";
-                        picPendu.Load(dossier + "pendu" + (nbEssai + 1) + ".png");
+                        picPendu.Image = (Image)Properties.Resources.ResourceManager.GetObject("pendu" + (nbEssai+1));
+                        
                         // Ajout de 1 au nombre d'essai
                         nbEssai++;
                     }
