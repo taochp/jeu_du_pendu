@@ -47,10 +47,12 @@
             this.cbbChoixlettre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbChoixlettre.FormattingEnabled = true;
             this.cbbChoixlettre.Location = new System.Drawing.Point(10, 19);
+            this.cbbChoixlettre.MaxLength = 1;
             this.cbbChoixlettre.Name = "cbbChoixlettre";
             this.cbbChoixlettre.Size = new System.Drawing.Size(36, 28);
             this.cbbChoixlettre.TabIndex = 3;
             this.cbbChoixlettre.SelectedIndexChanged += new System.EventHandler(this.cbbChoixlettre_SelectedIndexChanged);
+            this.cbbChoixlettre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbbChoixlettre_KeyPress);
             // 
             // btnTest
             // 
@@ -94,7 +96,7 @@
             this.txtMotachercher.TabIndex = 0;
             this.txtMotachercher.Text = "GGGGGGGGGGGGGGG";
             this.txtMotachercher.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMotachercher.TextChanged += new System.EventHandler(this.txtMotachercher_TextChanged);
+            this.txtMotachercher.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMotachercher_KeyPress);
             // 
             // btnPlay
             // 
